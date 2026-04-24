@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
-const ADMIN_USERNAME = "cipollas"
-const APP_SOURCE = "app_pionieri"
+// Importiamo le costanti centrali per evitare disallineamenti con le altre app
+const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME || "cipollas"
+const APP_SOURCE = process.env.NEXT_PUBLIC_APP_SOURCE || "app_pionieri"
 
 interface AccessLog {
   id: string
